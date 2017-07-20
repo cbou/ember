@@ -50011,7 +50011,7 @@ enifed('glimmer-runtime/lib/dom/attribute-managers', ['exports', 'glimmer-runtim
     })(PropertyManager);
 
     function isUserInputValue(tagName, attribute) {
-        return (tagName === 'INPUT' || tagName === 'TEXTAREA') && attribute === 'value';
+        return (tagName.toUpperCase() === 'INPUT' || tagName.toUpperCase() === 'TEXTAREA') && attribute === 'value';
     }
 
     var InputValuePropertyManager = (function (_AttributeManager2) {
@@ -50041,7 +50041,7 @@ enifed('glimmer-runtime/lib/dom/attribute-managers', ['exports', 'glimmer-runtim
     var INPUT_VALUE_PROPERTY_MANAGER = new InputValuePropertyManager('value');
     exports.INPUT_VALUE_PROPERTY_MANAGER = INPUT_VALUE_PROPERTY_MANAGER;
     function isOptionSelected(tagName, attribute) {
-        return tagName === 'OPTION' && attribute === 'selected';
+        return tagName.toUpperCase() === 'OPTION' && attribute === 'selected';
     }
 
     var OptionSelectedManager = (function (_PropertyManager2) {
