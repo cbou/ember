@@ -6815,7 +6815,7 @@ enifed('@glimmer/runtime', ['exports', '@glimmer/util', '@glimmer/reference', '@
     }(PropertyManager);
 
     function isUserInputValue(tagName, attribute) {
-        return (tagName === 'INPUT' || tagName === 'TEXTAREA') && attribute === 'value';
+        return (tagName.toUpperCase() === 'INPUT' || tagName.toUpperCase() === 'TEXTAREA') && attribute === 'value';
     }
 
     var InputValuePropertyManager = function (_AttributeManager2) {
@@ -6846,7 +6846,7 @@ enifed('@glimmer/runtime', ['exports', '@glimmer/util', '@glimmer/reference', '@
 
     var INPUT_VALUE_PROPERTY_MANAGER = new InputValuePropertyManager('value');
     function isOptionSelected(tagName, attribute) {
-        return tagName === 'OPTION' && attribute === 'selected';
+        return tagName.toUpperCase() === 'OPTION' && attribute === 'selected';
     }
 
     var OptionSelectedManager = function (_PropertyManager2) {
